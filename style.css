@@ -32,7 +32,10 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 10px; }
-    .container .all_numbers button {
+    .container .all_numbers .button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 80px;
       height: 50px;
       margin: 2px;
@@ -40,7 +43,7 @@ body {
       border: none;
       outline: none;
       border-radius: 5px; }
-    .container .all_numbers button:active {
+    .container .all_numbers .button:active {
       border: 1px solid black; }
     .container .all_numbers #equally {
       background-color: #b83131; }
