@@ -15,24 +15,23 @@ body {
   height: 370px;
   border: 2px solid black;
   border-radius: 20px; }
-  .container .input_box {
+  .container .box_numeral {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
     height: 70px;
     border-bottom: 2px solid black; }
-    .container .input_box input {
-      width: 290px;
-      height: 45px;
-      font-size: 30px; }
+    .container .box_numeral span {
+      margin-left: 20px;
+      font-size: 25px; }
   .container .all_numbers {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin-top: 10px; }
-    .container .all_numbers .button {
+    .container .all_numbers .button, .container .all_numbers .button_numeral, .container .all_numbers .button_point {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -42,7 +41,8 @@ body {
       background-color: #e2e2e2;
       border: none;
       outline: none;
-      border-radius: 5px; }
+      border-radius: 5px;
+      background-color: #a1a1a198; }
     .container .all_numbers .button:active {
       border: 1px solid black; }
     .container .all_numbers #equally {
