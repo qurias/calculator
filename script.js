@@ -1,33 +1,32 @@
-let log = console.log
+let log = console.log;
 
-let math_symbols = document.querySelectorAll("#math_symbol")
+let math_symbols = document.querySelectorAll('.math_symbol');
 
-const hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F']
+const hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F'];
+
+math_symbols.forEach(e => {
+ e.style.backgroundColor = changes_color();
+});
 
 function changes_color() {
-  let color = "#"
-  for (let j = 0; j < 8; j++) {
-    for (let i = 0; i < 6; i++) {
-            let random = Math.floor(Math.random() * hex.length)
-            color += hex[random];
-    }
-    color += "9d"
-    math_symbols[j].style.backgroundColor = `${color}`;
-    color = '#'
-  }
-}
-changes_color()
+  let hexColor = '#';
+  for (let i = 0; i < 6; i++) {
+      let randomNumber = Math.floor(Math.random() * hex.length);
+      hexColor += hex[randomNumber];
+  };
+  return hexColor;
+};
 
-let numeral = document.querySelector('.numeral')
-let equally = document.querySelector('#equally')
-let buttons_numeral = document.querySelectorAll('.button_numeral')
+let numeral = document.querySelector('.numeral');
+let equally = document.querySelector('.equally');
+let buttons_numeral = document.querySelectorAll('.button_numeral');
 
-var value1 = ''
-let value1_condition = true
-let value2 = ''
-let value2_condition = false
-let test = document.querySelector('.test')
-let math_symbol = ''
+var value1 = '';
+let value1_condition = true;
+let value2 = '';
+let value2_condition = false;
+let test = document.querySelector('.test');
+let math_symbol = '';
 
 
 math_symbols.forEach((symbol) => {
